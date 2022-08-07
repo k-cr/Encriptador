@@ -29,3 +29,14 @@ function desencriptar() {
     var outputTexto = document.getElementById('conTexto')
     outputTexto.value = desencriptado
 }
+
+function copiar() {
+    var aCopiar = document.getElementById('conTexto').value
+    navigator.clipboard.writeText(aCopiar)
+    .then(() => {
+        alert("Texto copiado con éxito")
+    })
+    .catch(() => {
+        alert("Algo salió mal")
+    })
+}
